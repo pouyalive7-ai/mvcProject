@@ -1,0 +1,127 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp/MyMvcApp.csproj": {}
+  },
+  "projects": {
+    "/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/MyLibrary/MyLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/MyLibrary/MyLibrary.csproj",
+        "projectName": "MyLibrary",
+        "projectPath": "/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/MyLibrary/MyLibrary.csproj",
+        "packagesPath": "/home/vakilip/.nuget/packages/",
+        "outputPath": "/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/MyLibrary/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/vakilip/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Pgvector.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[0.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.126/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp/MyMvcApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp/MyMvcApp.csproj",
+        "projectName": "MyMvcApp",
+        "projectPath": "/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp/MyMvcApp.csproj",
+        "packagesPath": "/home/vakilip/.nuget/packages/",
+        "outputPath": "/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/vakilip/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/MyLibrary/MyLibrary.csproj": {
+                "projectPath": "/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/MyLibrary/MyLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.126/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

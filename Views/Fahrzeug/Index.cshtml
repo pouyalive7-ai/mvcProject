@@ -1,0 +1,31 @@
+@model FahrzeugListeModel
+<p>Diese Fahrzeuge befinden sich in der Datenbank.</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fahrzeug in Model.Fahrzeuge)
+        {
+            <tr>
+                <td>@fahrzeug.Id </td>
+                <td>@fahrzeug.Name</td>
+                <td>@fahrzeug.Typ</td>
+                <td>
+                    <a asp-action="Loeschen" asp-route-id="@fahrzeug.Id">Löschen</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+    <br/>
+    <p>
+        @Html.ActionLink("Fahrzeug hinzufügen", "Einfuegen", "Fahrzeug")
+    </p>
