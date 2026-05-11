@@ -49,3 +49,9 @@
 /home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp/obj/Debug/net8.0/MyMvcApp.pdb
 /home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp/obj/Debug/net8.0/MyMvcApp.genruntimeconfig.cache
 /home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp/obj/Debug/net8.0/ref/MyMvcApp.dll
+/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp/obj/Debug/net8.0/MyMvcApp.sourcelink.json
+/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp/obj/Debug/net8.0/MyMvcApp.MvcApplicationPartsAssemblyInfo.cs
+/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll

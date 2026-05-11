@@ -1,0 +1,19 @@
+@model FahrzeugAktualisierenModel
+<p>Wollen Sie das Fahrzeug wirklich aktualisieren?</p>
+<div>
+    <h4>@Model.Name</h4>
+    <form asp-asp-controller="Fahrzeug" asp-action="Aktualisieren">
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+    <div>
+        <label asp-for="Type" class="control-label"></label>
+        <select asp-for="Type" asp-items="Model.Typen" class="form-control"></select>
+        <span asp-validation-for="Type" class="text-danger"></span>
+    </div>
+        <input type="submit" value="Aktualisieren" class="btn btn-primary" />
+        @Html.ActionLink("Abbrechen", "Index", "Fahrzeug", null, new { @class = "btn btn-secondary" })
+    </form>
+</div>

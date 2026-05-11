@@ -1,17 +1,35 @@
 using MyLibrary;
+using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
-string connectionString = "Server=localhost;User ID=postgres;Password=admin;Database=autodb";
-builder.Services.AddScoped(Span=> new DatenbankKontext(connectionString));
+builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<ConfigurationsLeser>();
+builder.Services.AddScoped(sp => new DatenbankKontext(
+    sp.GetRequiredService<ConfigurationsLeser>().GetConnectionString()));
+
 builder.Services.AddScoped<FahrzeugRepository>();
+
+
+builder.Services.AddMvc();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo { 
+        Title = "My API", Version = "v1" });
+});
 
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+app.UseSwagger();
+app.UseSwaggerUI(options =>
+{
+    options.SwaggerEndpoint("v1/swagger.json", "My API V1");
+});
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -33,3 +51,19 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+
+public class ConfigurationsLeser
+{
+    private readonly IConfiguration _configuration;
+
+    public ConfigurationsLeser(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
+
+    public string GetConnectionString()
+    {
+        return _configuration.GetConnectionString("mypostgres");
+    }
+}

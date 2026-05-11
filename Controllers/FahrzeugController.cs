@@ -67,4 +67,37 @@ public class FahrzeugController : Controller
         _fahrzeugRepository.deleteFahrzeug(model.Id);
         return RedirectToAction("Index");
     }
+
+    [HttpGet]
+    public IActionResult Aktualisieren(int id)
+    {
+        var fahrzeug = _fahrzeugRepository.GetFahrzeuge().FirstOrDefault(f => f.Id == id);
+        if (fahrzeug == null)
+        {
+            return NotFound();
+        }
+        var model = new FahrzeugAktualisierenModel
+        {
+            Id = fahrzeug.Id,
+            Name = fahrzeug.Name,
+            Type = fahrzeug.Typ
+        };
+        return View(model);
+    }
+
+    [HttpPost]
+    public IActionResult Aktualisieren(FahrzeugAktualisierenModel model)
+    {
+        var fahrzeug = _fahrzeugRepository.GetFahrzeuge().FirstOrDefault(f => f.Id == model.Id);
+        if (fahrzeug == null)
+        {
+            return NotFound();
+        }
+        fahrzeug.Name = model.Name;
+        fahrzeug.Typ = model.Type;
+        fahrzeug.Id = model.Id;
+
+        _fahrzeugRepository.updateFahrzeug(fahrzeug.Id, fahrzeug.Name, fahrzeug.Typ);
+        return RedirectToAction("Index");
+    }
 }

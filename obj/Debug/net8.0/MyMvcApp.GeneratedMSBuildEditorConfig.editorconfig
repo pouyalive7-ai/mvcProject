@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp/Views/Fahrzeug/Aktualisieren.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFocnpldWcvQWt0dWFsaXNpZXJlbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/vakilip/4_semester/cSharp/uebungen/frameworkAufgabe/adminTool/MyMvcApp/Views/Fahrzeug/Einfuegen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFocnpldWcvRWluZnVlZ2VuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
