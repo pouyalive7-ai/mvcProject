@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using MyLibrary;
 
 [ApiController]
-[Route("api/v1/[controller]")]
+[Route("api/v1/[controller]/[action]")]
 public class FahrzeugApiController : ControllerBase
 {
     private readonly FahrzeugRepository _fahrzeugRepository;
@@ -18,7 +18,7 @@ public class FahrzeugApiController : ControllerBase
         return _fahrzeugRepository.GetFahrzeuge();
     }
 
-    [HttpGet(Name = "GetFahrzeugPerId")]
+    [HttpGet(Name = "GetFahrzeugMitId")]
     public IEnumerable<FahrzeugDTO> GetmitId(int id)
     {
         return _fahrzeugRepository.GetFahrzeuge().Where(f => f.Id == id);
